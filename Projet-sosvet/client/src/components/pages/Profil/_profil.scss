@@ -1,0 +1,87 @@
+@import '../../../sass/config/mixins';
+
+
+        .conteneur {
+          border: none;
+          background-color: #ededed;
+          width: 100%;
+          .jumbo{
+           border: none;
+            background: #20b2aa;
+            padding: 2.5%;
+            h2{
+              font-size: 1.5rem;
+              color: white;
+            }
+          }
+          .table {
+            padding: 5%;
+            margin-top: 5%;
+            h6{
+              font-size: 1.2rem;
+            }
+            .photo-perfil{
+              width: 20vw;
+              height: 15vh;
+              border: 1px blue solid;
+             margin: -30% 0 10% 70%;
+           
+            }
+              form{
+                text-align: right;
+                label{
+                  margin: 0;              
+                }
+                input{
+                  margin: 0;
+                }
+                button{
+                 margin: 0;
+                }
+           
+              }
+            }
+          
+          
+           
+            .button3 {
+              width: 50%;
+              margin: -5% 0 5% 25%;
+              background-color:  #ff6767;
+              height: 40px;
+              font-size: 18px;
+              border: none;
+              border-radius: 5px;
+              color: rgb(255, 255, 255);
+              margin-top: 5%;
+            }
+            .button3:hover {
+              background-color: rgb(151, 25, 46);
+              cursor: pointer;
+            }
+            .button3:focus {
+              outline: none !important;
+            }
+          }
+        
+    
+      
+        @include media(tablet) {
+          padding: 2%
+        }
+      
+        @include media(desktop) {
+          flex-direction: row;
+          flex-wrap: wrap;
+          .chien{
+            width: 1150px;
+            margin-bottom: 25%;
+            margin-left: 15%;
+          }
+        }
+
+     
+  
+  
+        
+      

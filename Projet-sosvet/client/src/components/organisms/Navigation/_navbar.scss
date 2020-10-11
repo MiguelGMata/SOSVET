@@ -1,0 +1,55 @@
+@import '../../../sass/config/mixins';
+
+.navigation {
+  background-color: #ededed;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 91%;
+  
+  h3 {
+    font-size: 10px;
+    font-weight: 600;
+    color: rgb(102, 101, 101);
+    
+  }
+  &__button {
+    margin: 0 5% 0 5%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 10px;
+    
+    img {
+      width: 10vw;
+      @include media(tablet) {
+        width: 2vw;
+      }
+      @include media(desktop) {
+        width: 2vw;
+      }
+    }
+  }
+  
+
+    /*.media_tablet_desktop {
+      display: none;
+      @include media(tablet) {
+        display: block !important;
+      }
+      @include media(desktop) {
+        display: block !important;
+      }
+    }
+    .media_smartphone {
+      @include media(tablet) {
+        display: none;
+      }
+      @include media(desktop) {
+        display: none;
+      }
+    }*/
+  }
+  

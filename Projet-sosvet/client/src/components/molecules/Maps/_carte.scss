@@ -1,0 +1,21 @@
+@import '../../../sass/config/mixins';
+
+.carte{
+    width: 90vw;
+    height:35vh;
+    margin: 3% 0 6% 2%;
+
+    
+  
+    @include media(tablet) {
+        width: 90vw;
+        height: 100vh;
+        margin-left: 2%;
+      }
+      @include media(desktop) {
+        width: 95vw;
+        height: 100vh;
+        margin-left: -2%;
+      }
+
+}

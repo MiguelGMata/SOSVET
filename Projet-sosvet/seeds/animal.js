@@ -1,0 +1,50 @@
+module.exports = () => {
+    return [
+        {
+            id: 1,
+            userId: 1,
+            nom: 'Verocka',
+            espece: 'Chien',
+            race: 'Spitz Allemande',
+            couleur: 'Noir',
+            sexe: 'Female',
+            poids: '5',
+            sterilisation: 'non',
+            information: 'Operation pâte droit',
+            date_naissance: new Date(),
+            createdAt: new Date(),
+            updatedAt: new Date(),
+        },
+        {
+            id: 2,
+            userId: 2,
+            nom: 'Polly Dit Verocka',
+            espece: 'Chien',
+            race: 'Spitz Allemande',
+            couleur: 'Noir',
+            sexe: 'Female',
+            poids: '5',
+            sterilisation: 'non',
+            information: 'Operation pâte droit',
+            date_naissance: new Date(),
+            createdAt: new Date(),
+            updatedAt: new Date(),
+        },
+        {
+            id: 3,
+            userId: 2,
+            nom: 'Firulais',
+            espece: 'Chien',
+            race: 'Labrador',
+            couleur: 'Noir',
+            sexe: 'male',
+            poids: '15',
+            sterilisation: 'non',
+            information: 'Operation pâte droit',
+            date_naissance: new Date(),
+            createdAt: new Date(),
+            updatedAt: new Date(),
+        }
+    ]
+        ;
+};

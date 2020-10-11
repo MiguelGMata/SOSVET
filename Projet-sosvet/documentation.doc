@@ -1,0 +1,39 @@
+https://www.youtube.com/watch?v=PuwGdowtm5s para el mapa
+https://www.colorhexa.com/d3d3d3 por los colores
+https://www.youtube.com/watch?v=a1hhL9z-fbU para conneccion google
+
+
+
+killall -9 node
+env= SKIP_PREFLIGHT_CHECK=true
+
+npm install react-google-maps
+npm install react-google-login
+npm install node-sass
+npx sequelize init
+npm i axios
+npx create-react-app client
+npw sequelize --help
+npm run start:watch
+npx sequelize db:seed:all
+npx sequelize db:migrate
+npx sequelize-cli db:migrate:undo:all
+npx sequelize-cli db:migrate --debug
+npx sequelize-cli db:migrate:undo:all
+npx sequelize db:drop
+
+npx sequelize-cli model:generate --name animal --attributes id_user:string
+
+
+
+
+Primer Paso: luego de crear la carpeta back en el terminal ejecute la linea de comando npm init para crear el package.json hay que darle enter hasta el final
+Segundo: luego copie todo las librarias a utilizar he hice un npm instal para crearlas
+luego en dev escribi dev": "nodemon server.js" y enseguida cree el archivo server.js
+luego de escribir todas los paquetes requerido cree el fichero database para conectar la base de datos
+luego cree el fichero models para crear el archivo User.js con sus lineas de comando
+luego cree el fichero routes con el archivo Users.js con sus lineas de comando
+
+luego ejecute npm run dev 
+
+luego instale react dentro de mi projecto con el comando npx create-react-app client

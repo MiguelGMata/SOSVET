@@ -1,0 +1,82 @@
+@import '../../../sass/config/mixins';
+.table{
+    
+    .tex{
+        height: 53vh;
+        //background-image: url("../gatico.jpg");
+        //background-position: center;
+        h5{
+            text-align: center;
+            font-size: 1.5rem;
+        }
+        li{
+            font-size: 1rem;
+        }
+        .button-appel{
+        margin-left: 85%;
+        margin-top: 0%;
+            .appel {
+                width: 60%;
+                height: 30px;
+                font-size: 20px;
+                background-color:  #ff4d4d;
+                border: none;
+                border-radius: 5px;
+                color: rgb(255, 255, 255);
+                border-style: none;
+                
+                
+            }
+            .appel:hover {
+                background-color: rgb(151, 25, 46);
+                cursor: pointer;
+            }
+            .appel:focus {
+                outline: none !important;
+            }
+            p{
+                margin-left: -25%;  
+                color: red;
+                font-size: 0.9rem;
+            }
+        }
+
+        .button-rdv{
+                margin-left: 5%;
+                margin-top: -6%;
+                margin-bottom: 5%;
+
+            .rdv {
+                width: 10%;
+                height: 30px;
+                font-size: 20px;
+                background-color:  #ff4d4d;
+                border: none;
+                border-radius: 5px;
+                color: rgb(255, 255, 255);
+                border-style: none;
+                
+                
+            }
+            .rdv:hover {
+                background-color: rgb(151, 25, 46);
+                cursor: pointer;
+            }
+            .rdv:focus {
+                outline: none !important;
+            }
+            p{
+                margin-left: 2%;
+                font-size: 0.9rem;
+                color: red;
+            }
+            
+        }
+        .photo{
+            width: 90%;
+            height: 30vh;
+            margin: 2% 0 2% 5%;
+        }
+    }
+
+}
