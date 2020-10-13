@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
-import { connexion } from './ListeFunc';
+import { login } from './Liste.Func';
 import { GoogleLogin } from 'react-google-login';
 import { Link } from 'react-router-dom';
+
 require('./_connexion.scss')
 
 const responseGoogle = (reponse) => {
-    //console.log(reponse);
+    console.log(reponse);
 }
+
 class Connexion extends Component {
+
 
     constructor() {
         super()
@@ -16,6 +19,7 @@ class Connexion extends Component {
             password: '',
             errors: {}
         }
+
         this.onChange = this.onChange.bind(this)
         this.onSubmit = this.onSubmit.bind(this)
     }
@@ -31,7 +35,7 @@ class Connexion extends Component {
             password: this.state.password
         }
 
-        connexion(user).then(res => {
+        login(user).then(res => {
             if (res) {
                 this.props.history.push(`/profil`)
             }
@@ -40,7 +44,6 @@ class Connexion extends Component {
 
     render() {
         return (
-
 
             <div className="container conteneur">
                 <div className="row">
@@ -73,7 +76,7 @@ class Connexion extends Component {
                             <div className="button-center">
                                 <button type="submit" className="button">
                                     Se connecter
-                                    </button>
+                            </button>
                             </div>
                         </form>
                     </div>

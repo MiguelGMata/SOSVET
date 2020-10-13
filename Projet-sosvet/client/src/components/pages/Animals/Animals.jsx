@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
-//import MontreVet from '../Veterinaire/MontreVet';
-require('./_animal.scss')
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+
+require('./_animal.scss');
 
 class Animals extends Component {
 

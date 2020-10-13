@@ -1,10 +1,10 @@
-import React, { Component } from 'react'
-import ListContext from './ListeContext'
-import { getVeterinaire } from './ListeFunc'
-import MontreVet from './MontreVet'
-import Rechercher from '../../organisms/Rechercher/Rechercher'
+import React, { Component } from 'react';
+import ListContext from './ListeContext';
+import { getVeterinaire } from './ListeFunc';
+import MontreVet from './MontreVet';
+import Rechercher from '../../organisms/Rechercher/Rechercher';
 
-require('./_veterinaire.scss')
+require('./_veterinaire.scss');
 
 class Veterinaires extends Component {
     constructor(props) {
@@ -48,17 +48,12 @@ class Veterinaires extends Component {
         })
     }
 
-
-
     render() {
         return (
             <section>
-
                 <div className="div-center">
-
                     <div className="carte">
                         <div className="jumbo">
-
                             <ListContext.Provider value={this.state}>
                                 <Rechercher />
                                 <MontreVet />

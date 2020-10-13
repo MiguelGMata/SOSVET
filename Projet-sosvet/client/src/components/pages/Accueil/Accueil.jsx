@@ -1,11 +1,10 @@
-import React, { Component } from 'react'
-import Carte from '../../molecules/Maps/Carte'
-//import Rechercher from '../../organisms/Search/Rechercher'
-import Veterinaires from '../Veterinaire/Veterinaires'
+import React, { Component } from 'react';
+import Carte from '../../molecules/Maps/Carte';
+import Veterinaires from '../Veterinaire/Veterinaires';
 
 
 
-require('./_accueil.scss')
+require('./_accueil.scss');
 
 class Accueil extends Component {
     render() {

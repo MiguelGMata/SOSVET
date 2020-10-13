@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import ListContext from './ListeContext'
+import React, { Component } from 'react';
+import ListContext from './ListeContext';
 
 
 class MontreVet extends Component {
@@ -9,7 +9,6 @@ class MontreVet extends Component {
             <ListContext.Consumer>
                 {todo => (
                     <div className="table">
-
                         {todo.items.map((item, index) => (
                             <ul className="tex" key={index}>
                                 <h5>{item.nom} </h5>

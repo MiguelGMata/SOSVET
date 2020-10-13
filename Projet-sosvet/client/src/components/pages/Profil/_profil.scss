@@ -23,9 +23,12 @@
             .photo-perfil{
               width: 20vw;
               height: 15vh;
-              border: 1px blue solid;
-             margin: -30% 0 10% 70%;
-           
+            
+             margin: -30% 0 10% 80%;  
+             img{
+              width: 20vw;
+              height: 15vh;
+             }        
             }
               form{
                 text-align: right;

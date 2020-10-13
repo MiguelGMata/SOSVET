@@ -1,4 +1,4 @@
-import axios from 'axios'
+import axios from 'axios';
 
 export const getVeterinaire = async () => {
     return await axios
@@ -7,7 +7,7 @@ export const getVeterinaire = async () => {
         })
         .then(res => {
             return res.data
-        })
+        });
 }
 
 

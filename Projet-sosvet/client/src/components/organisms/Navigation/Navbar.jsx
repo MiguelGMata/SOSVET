@@ -6,7 +6,7 @@ require('./_navbar.scss')
 class Navbar extends Component {
   logOut(e) {
     e.preventDefault()
-    localStorage.removeItem('usertoken')
+    localStorage.removeItem('token')
     this.props.history.push(`/`)
   }
 
@@ -31,7 +31,6 @@ class Navbar extends Component {
             <h3>Connexion</h3>
           </Link>
         </div>
-
       </nav>
     )
 
@@ -72,7 +71,7 @@ class Navbar extends Component {
 
     return (
       <nav className="navigation">
-        {localStorage.usertoken ? userLink : loginRegLink}
+        {localStorage.token ? userLink : loginRegLink}
       </nav>
     )
   }
