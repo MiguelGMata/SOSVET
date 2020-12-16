@@ -1,16 +1,13 @@
 var express = require('express')
 var cors = require('cors')
 var bodyParser = require('body-parser')
-const apiRouter = require('./apiRouter').router;
+const apiRouter = require('./routes/apiRouter').router;
 const helmet = require('helmet');
 const logger = require('morgan');
 const { notFoundHandler, errorLogger, errorHandler } = require('./middlewares');
 
-
-
 const app = express()
 const port = process.env.PORT || 5000
-
 
 //Helmet
 app.use(helmet());
@@ -29,15 +26,12 @@ app.use(
     })
 )
 
-
 //configure routes
 app.get('/', function (request, response) {
     response.json({ message: 'hello ! ' });
 });
 
-
 app.use('/sos', apiRouter);
-
 
 app.use('*', notFoundHandler);
 app.use(errorLogger);

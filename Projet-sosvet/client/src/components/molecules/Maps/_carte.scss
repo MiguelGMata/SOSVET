@@ -3,19 +3,21 @@
 .carte{
     width: 90vw;
     height:35vh;
-    margin: 3% 0 6% 2%;
-
-    
+    display:block;
+    margin-left: auto;
+    margin-right: auto;    
   
     @include media(tablet) {
-        width: 90vw;
-        height: 100vh;
-        margin-left: 2%;
+        width: 80vw;
+        height: 60vh;
       }
       @include media(desktop) {
-        width: 95vw;
-        height: 100vh;
-        margin-left: -2%;
+        width: 43vw;
+        height: 85vh;
+        margin-left: auto;
+        margin-right: auto;  
+        margin-bottom: -5%;
       }
+      
 
 }

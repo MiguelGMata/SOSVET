@@ -11,42 +11,11 @@ module.exports = (sequelize, DataTypes) => {
     }
     User.init(
         {
-            id: {
-                type: DataTypes.INTEGER,
-                autoIncrement: true,
-                primaryKey: true,
-                allowNull: false,
-                validate: {
-                    notNull: true,
-                },
-            },
-
-            first_name: {
-                allowNull: true,
-                type: DataTypes.STRING
-            },
-            last_name: {
-                allowNull: true,
-                type: DataTypes.STRING
-            },
-            email: {
-                allowNull: true,
-                type: DataTypes.STRING
-            },
-            password: {
-                allowNull: true,
-                type: DataTypes.STRING
-            },
-            createdAt: {
-                allowNull: true,
-                type: DataTypes.DATE
-            },
-            updatedAt: {
-                allowNull: true,
-                type: DataTypes.DATE
-            }
+            first_name: DataTypes.STRING,
+            last_name: DataTypes.STRING,
+            email: DataTypes.STRING,
+            password: DataTypes.STRING,
         },
-
         {
             sequelize,
             modelName: 'User',

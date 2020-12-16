@@ -1,51 +1,60 @@
 import React, { Component } from 'react';
-import { login } from './Liste.Func';
+import { connexion } from './Liste.Func';
 import { GoogleLogin } from 'react-google-login';
 import { Link } from 'react-router-dom';
 
 require('./_connexion.scss')
+const responseGoogle = response => {
+    console.log(response)
+    console.log('tutu', response.profileObj.name)
+    console.log(response.profileObj.email)
+    console.log(response.profileObj.imageUrl)
+    console.log(response.tokenObj.access_token)
 
-const responseGoogle = (reponse) => {
-    console.log(reponse);
 }
 
 class Connexion extends Component {
-
-
     constructor() {
         super()
         this.state = {
             email: '',
             password: '',
-            errors: {}
+            errorMessage: [],
         }
-
         this.onChange = this.onChange.bind(this)
         this.onSubmit = this.onSubmit.bind(this)
     }
-
     onChange(e) {
         this.setState({ [e.target.name]: e.target.value })
     }
     onSubmit(e) {
         e.preventDefault()
-
         const user = {
             email: this.state.email,
-            password: this.state.password
+            password: this.state.password,
         }
-
-        login(user).then(res => {
-            if (res) {
-                this.props.history.push(`/profil`)
-            }
-        })
+        connexion(user)
+            .then(res => {
+                if (res) {
+                    this.props.history.push(`/profil`)
+                }
+            })
+            .catch(err => {
+                this.setState({
+                    errorMessage: err.response
+                });
+                //console.log('pepito', this.state.errorMessage.data);
+                //const title = (this.state.errorMessage.data.title);
+                const description = (this.state.errorMessage.data.description);
+                if (window.confirm(description)) {
+                }
+            })
+        //console.log('coucou', user);
     }
-
     render() {
-        return (
 
-            <div className="container conteneur">
+        return (
+            <div className="conteneur" id="taille">
                 <div className="row">
                     <div className="col-md-6 mt-5 mx-auto">
                         <form noValidate onSubmit={this.onSubmit}>
@@ -71,7 +80,7 @@ class Connexion extends Component {
                                     placeholder="Indiquez votre mot de passe"
                                     value={this.state.password}
                                     onChange={this.onChange}
-                                />
+                                />{this.state.errorMessage.title}
                             </div>
                             <div className="button-center">
                                 <button type="submit" className="button">
@@ -80,9 +89,8 @@ class Connexion extends Component {
                             </div>
                         </form>
                     </div>
-
                 </div><br></br>
-                <h3>Inscrivez-vous <br></br>si vous n'avez jamais utilisé SOSVET</h3>
+                <h3>Inscrivez-vous ici <br></br>si vous n'avez jamais utilisé SOSVET</h3>
                 <div className="button-center">
                     <button className="button2" type="submit">
                         <Link to="/inscription">
@@ -91,8 +99,8 @@ class Connexion extends Component {
                     </button>
                 </div>
                 <div className="button-center">
-                    <div className="btn-google ">
-                        <br></br>
+                    <div className="btn-google">
+
                         <GoogleLogin
                             clientId="77122650789-4cni14nj3ho347dgcihh0vtvn7qoc52u.apps.googleusercontent.com"
                             buttonText="Continuer avec Google"
@@ -103,9 +111,9 @@ class Connexion extends Component {
                     </div>
                 </div>
             </div>
-
         )
     }
 }
 
 export default Connexion
+

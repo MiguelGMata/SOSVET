@@ -8,11 +8,10 @@ require('./_header.scss')
 class Header extends Component {
     render() {
         return (
-            <header>
+            <header className="header">
+                <section id="bakery">
 
-
-
-
+                </section>
             </header>
         )
     }

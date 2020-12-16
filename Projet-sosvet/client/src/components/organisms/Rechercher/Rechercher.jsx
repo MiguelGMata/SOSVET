@@ -5,7 +5,7 @@ require('./_search.scss');
 
 class Rechercher extends Component {
     state = {
-        rechercher: '',
+        rechercher: ''
     }
     static contextType = ListContext;
 
@@ -13,7 +13,7 @@ class Rechercher extends Component {
         e.persist();
         await this.setState({ rechercher: e.target.value })
         // console.log(this.state.rechercher);
-        this.filtrerElement();
+        this.filtrerElement()
         console.log('coucou', this.state)
     }
 
@@ -31,7 +31,6 @@ class Rechercher extends Component {
         ///console.log('context', context)
     }
 
-
     render() {
         return (
             <div className="searchContainer">
@@ -42,7 +41,7 @@ class Rechercher extends Component {
                             type="search"
                             value={this.state.rechercher}
                             onChange={this.onChange}
-                            placeholder="vétérinaires autour de moi"
+                            placeholder="&#128205;Indiquez la ville à rechercher"
                         />
                     </form>
                 </div>

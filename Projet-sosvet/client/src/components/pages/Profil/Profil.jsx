@@ -5,18 +5,18 @@ import { Link } from 'react-router-dom';
 require('./_profil.scss');
 
 class Profil extends Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            perfils: []
-        }
+
+    state = {
+        loading: true,
+        perfilsAni: [],
+        profilUser: []
     }
 
-    componentDidMount() {
+    async componentDidMount() {
         {
             const token = localStorage.getItem('token');
             //console.log('token', token)
-            fetch(`/sos/profil`, {
+            await fetch(`/sos/profil`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -25,9 +25,10 @@ class Profil extends Component {
             })
                 .then(response => response.json())
                 .then(data => {
-                    //console.log('auto', data)
-                    this.setState({ perfils: data }); //revisar aqui 
-                    console.log('pepito', this.state.perfils);
+                    console.log('auto', data)
+                    this.setState({ perfilsAni: data.Animals, loading: false, profilUser: data });
+                    //this.setState({ perfils: data, loading: false }); //revisar aqui 
+                    //console.log('pepito', this.state.perfils);
                     //console.log('pepi', this.state.perfils.Animals[0].nom);
                 });
         }
@@ -36,40 +37,47 @@ class Profil extends Component {
 
 
     render() {
+        if (this.state.loading) {
+            return <div>loading...</div>
+        }
+        if (!this.state.perfilsAni) {
+            return <div>il n'y a pas animals</div>
+        }
         return (
+            <div className="conteneur" id="cont">
 
 
-            <div className="conteneur">
                 <div className="jumbo">
-                    <h2 className="text-center">{this.state.perfils.first_name} {this.state.perfils.last_name}</h2>
-                </div>
-
-                <div className="table">
-                    <h6>Prenom : {this.state.perfils.first_name}</h6>
-                    <h6>Nom : {this.state.perfils.last_name}</h6>
-                    <h6>Email : {this.state.perfils.email}</h6>
-                    <h6>NIP: {this.state.perfils.id}</h6>
-
-                    <div className="photo-perfil">
-                        <img src="./img/photo.png" alt="photo" />
-                    </div>
-                    <form method="post" enctype="multipart/form-data">
-                        <label for="file">Sélectionner votre photo</label>
-                        <input type="file" id="file" name="file" multiple />
-                        <button >Envoyer</button>
-                    </form>
-
-                </div>
-                <Link to="/animals" >
-                    <button href="" className="button3">
-                        Ajouter Animal
-                    </button>
-                </Link>
-                <div className="jumbo">
-                    <h2 className="text-center">Votre animal</h2>
+                    <h2 className="text-center">{this.state.profilUser.first_name} {this.state.profilUser.last_name}</h2>
                     <div className="table">
-                        <h6>Nom : </h6>
+                        <h6>Prenom : {this.state.profilUser.first_name}</h6>
+                        <h6>Nom : {this.state.profilUser.last_name}</h6>
+                        <h6>Email : {this.state.profilUser.email}</h6>
+                        <div className="photo-perfil">
+                            <img src="./img/photo.png" alt="photo" />
+                        </div>
+                        <form method="post" encType="multipart/form-data">
+                            <h6>Sélectionner votre photo</h6>
+                            <input type="file" id="file" name="file" /><br />
+                            <button className="button-a">Envoyer</button>
+                        </form>
                     </div>
+                    <Link to="/animals" >
+                        <button href="" className="button3">
+                            Ajouter Animal
+                    </button>
+                    </Link>
+                </div>
+                <div className="jumbo-2">
+                    <h1 className="text-center">Votre animal</h1>
+                    {this.state.perfilsAni.map(perfil => (
+                        <div className="table-aniprofil">
+                            <h6>Nom: {perfil.nom}</h6>
+                            <h6>Espece: {perfil.espece}</h6>
+                            <h6>Race: {perfil.race}</h6>
+                            <h6>Sexe: {perfil.sexe}</h6><div></div>
+                        </div>
+                    ))}
                 </div>
 
             </div>
@@ -79,3 +87,7 @@ class Profil extends Component {
 }
 
 export default Profil
+
+/**  <div className="photo-perfil">
+                    <img src="./img/photo.png" alt="photo" />
+                </div> */

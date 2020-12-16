@@ -1,18 +1,18 @@
 module.exports = () => {
     return [
         {
-            first_name: 'Nelson',
-            last_name: 'Garcia',
+            first_name: 'Santiago',
+            last_name: 'Lozada',
             password: 'nmgm2395',
-            email: 'nelson@hotmail.com',
+            email: 'santiagolozada@hotmail.com',
             createdAt: new Date(),
             updatedAt: new Date(),
         },
         {
-            first_name: 'Miguel',
-            last_name: 'Mata',
+            first_name: 'Luisa',
+            last_name: 'Velasquez',
             password: 'nmgm2395',
-            email: 'miguel@hotmail.com',
+            email: 'luisavelasquez@hotmail.com',
             createdAt: new Date(),
             updatedAt: new Date(),
         },

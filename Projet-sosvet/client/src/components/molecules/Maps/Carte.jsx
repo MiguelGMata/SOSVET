@@ -9,13 +9,13 @@ const mapURL = `https://maps.googleapis.com/maps/api/js?v=3.exp&key=${credential
 
 
 export const Carte = () => {
-    return <section>
+    return <div>
         <Map
             googleMapURL={mapURL}
             containerElement={<div className='carte' />}
             mapElement={<div style={{ height: '95%' }} />}
-            loadingElement={<p>Cargando</p>}
+            loadingElement={<p>Loading</p>}
         />
-    </section>;
+    </div>;
 };
 export default Carte;

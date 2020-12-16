@@ -20,6 +20,11 @@
       border: solid rgb(170, 170, 170) 0.5px;
       box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.116);
     }
+    @include media(desktop) {
+      width: 50%;
+      padding: 1%;
+      margin-top: 1%;
+     }
 
     img {
       width: 17px;
@@ -33,12 +38,16 @@
       width: 100%;
       input[type='search'] {
         width: 95%;
+        text-align: center;
         padding-left: 2%;
         color: rgb(73, 73, 73);
         border: none;
         @include media(tablet) {
           width: 30%;
-        }
+        }@include media(desktop) {
+          width: 100%;
+          font-size: 1.2rem;
+         }
       }
       input[type='date'] {
         display: none;

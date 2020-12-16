@@ -1,0 +1,128 @@
+@import '../../../sass/config/mixins';
+
+#modal-3 {
+  margin-top: 70vh;
+  @include media(desktop) {
+    margin-top: 57vh;
+  }
+}
+.modal-wrapper-3 {
+    background: white;
+    border: 1px solid #d0cccc;
+    box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.17);
+    margin: 100px auto 0;
+    transition: all .8s;
+    width: 80%;
+    @include media(desktop) {
+      width: 50%;
+    margin-left: 110%;
+    }
+}
+
+.modal-header {
+  background-color:  #20b2aa;
+  height: 7vh;
+    line-height: 40px;
+    padding: 5px 20px;
+}
+
+.modal-header h3 {
+    color: black;
+    float: center;
+    margin: 0;
+    padding: 0;
+}
+
+.modal-body {
+    padding: 10px 15px;
+    text-align: left;
+}
+
+.modal-footer {
+    height: 60px;
+    padding: 15px;
+    background-color:  #20b2aa;
+}
+
+.close-modal-btn {
+    color: black;
+    cursor: pointer;
+    float: right;
+    font-size: 30px;
+    margin: 0;
+}
+
+.close-modal-btn:hover {
+    color: black;
+}
+
+.btn-cancel, .btn-continue {
+    background: coral;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    outline: none;
+    padding: 10px;
+}
+
+.btn-cancel {
+    background-color: #b71c1c;
+    float: left;
+    height: 4.5vh;
+    margin-top: -1%;
+}
+
+.back-drop {
+    background-color: rgba(48, 49, 48, 0.42);
+    height: 100%;
+    position: fixed;
+    transition: all 1.3s;
+    width: 100%;
+}
+
+.open-modal-btn {
+    margin: 15px;
+    padding: 10px;
+    font-weight: bold;
+}
+
+
+  
+  
+  .spinner {
+    animation: spinner infinite .9s linear;
+    height: 90%;
+  }
+  .spinner:focus{
+    border:none;
+  }
+  @keyframes spinner {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  .form-error{
+    color: #F42B4B;
+    text-align: center;
+  }
+  @media screen and (max-width: 700px){
+    .login-container{
+      justify-content: center;
+      background-image: none;
+    }
+    .card {
+      width: 80%;
+      align-self: center;
+    }
+    
+  }
+  @media screen and (max-width: 350px){
+    .card {
+      width: 100%;
+    }
+    
+  }

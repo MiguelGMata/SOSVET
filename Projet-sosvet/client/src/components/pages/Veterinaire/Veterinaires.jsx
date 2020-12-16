@@ -3,6 +3,7 @@ import ListContext from './ListeContext';
 import { getVeterinaire } from './ListeFunc';
 import MontreVet from './MontreVet';
 import Rechercher from '../../organisms/Rechercher/Rechercher';
+import Carte from '../../molecules/Maps/Carte';
 
 require('./_veterinaire.scss');
 
@@ -17,21 +18,6 @@ class Veterinaires extends Component {
             setItems: (i) => {
                 this.setState({ items: i })
             }
-            /*  getAll: () => {
-                  getList().then(data => {
-                      this.setState(
-                          {
-                              term: '',
-                              items: [...data]
-                          },
-                          () => {
-                              console.log(this.state.items)
-                          }
-                      )
-                  })
-              }
-          }*/
-
         }
     }
     componentDidMount() {
@@ -51,14 +37,16 @@ class Veterinaires extends Component {
     render() {
         return (
             <section>
-                <div className="div-center">
-                    <div className="carte">
-                        <div className="jumbo">
-                            <ListContext.Provider value={this.state}>
-                                <Rechercher />
-                                <MontreVet />
-                            </ListContext.Provider>
-                        </div>
+                <div className="div-center-2">
+                    <div className="jumbo">
+                        <ListContext.Provider value={this.state}>
+                            <h2 className="text-center">Cherchez votre vétérinaire autour de vous</h2>
+                            <div className="carte-fix">
+                                <Carte />
+                            </div>
+                            <Rechercher />
+                            <MontreVet />
+                        </ListContext.Provider>
                     </div>
                 </div>
             </section>

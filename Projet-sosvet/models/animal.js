@@ -4,6 +4,14 @@ module.exports = (sequelize, DataTypes) => {
   class Animal extends Model {  //changer A mayus
     static associate(models) {
       this.belongsTo(models.User, { as: "user" });
+      this.hasMany(
+        models.Assureur, {
+        foreignKey: "animalId",
+      },
+        models.Soin, {
+        foreignKey: "animalId",
+      }
+      );
     }
   }
   Animal.init(
@@ -26,53 +34,16 @@ module.exports = (sequelize, DataTypes) => {
           key: "id",
         },
       },
-      nom: {
-        allowNull: false,
-        type: DataTypes.STRING
-      },
-      espece: {
-        allowNull: false,
-        type: DataTypes.STRING
-      },
-      race: {
-        allowNull: false,
-        type: DataTypes.STRING
-      },
-      couleur: {
-        allowNull: false,
-        type: DataTypes.STRING
-      },
-      sexe: {
-        allowNull: false,
-        type: DataTypes.STRING
-      },
-      poids: {
-        allowNull: false,
-        type: DataTypes.STRING
-      },
-      sterilisation: {
-        allowNull: false,
-        type: DataTypes.STRING
-      },
-      information: {
-        allowNull: false,
-        type: DataTypes.STRING(1000)
-      },
-      date_naissance: {
-        allowNull: false,
-        type: DataTypes.DATE
-      },
-      createdAt: {
-        allowNull: true,
-        type: DataTypes.DATE
-      },
-      updatedAt: {
-        allowNull: true,
-        type: DataTypes.DATE
-      },
-
+      nom: DataTypes.STRING,
+      espece: DataTypes.STRING,
+      race: DataTypes.STRING,
+      couleur: DataTypes.STRING,
+      sexe: DataTypes.STRING,
+      poids: DataTypes.STRING,
+      sterilisation: DataTypes.STRING,
+      information: DataTypes.STRING,
+      date_naissance: DataTypes.DATE
     },
-
     {
       sequelize,
       modelName: 'Animal',

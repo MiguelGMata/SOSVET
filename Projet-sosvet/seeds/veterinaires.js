@@ -2,7 +2,7 @@ module.exports = () => {
     return [
         {
             id: 1,
-            nom: "Veterinaire Aliaga",
+            nom: "Vétérinaire Aliaga",
             adresse: "73 avenue de la Republique",
             postal: "92120",
             lieux: "Montrouge",
@@ -13,7 +13,7 @@ module.exports = () => {
         },
         {
             id: 2,
-            nom: "Centre Hospitalier Veterinaire Fregis",
+            nom: "Centre Hospitalier Vétérinaire Fregis",
             adresse: "41 bis avenue Aristide Briand",
             postal: "94110",
             lieux: "Arcueil",
@@ -24,7 +24,7 @@ module.exports = () => {
         },
         {
             id: 3,
-            nom: "Veterinaire Cousin/Dunis",
+            nom: "Vétérinaire Cousin/Dunis",
             adresse: "56 rue Gabriel Peri",
             postal: "92120",
             lieux: "Montrouge",
@@ -35,18 +35,18 @@ module.exports = () => {
         },
         {
             id: 4,
-            nom: "Clinique Veterinaire Montrouge",
+            nom: "Clinique Vétérinaire Montrouge",
             adresse: "163 avenue de la Republique",
             postal: "92120",
             lieux: "Montrouge",
             phone: "01449650708",
-            pictures: "https://lh3.googleusercontent.com/proxy/cDYHPBkS5GxyPz_YZSazlIs-BkmWz0G67fDT4ko7VGA7ncrEb8XOzxHnN98lApaZfVDnUTRFQcSMrrtE-63SQic1pl5WfQxkN-hWZiD24saj0PPdQBe6X_d1vQ",
+            pictures: "https://cdn2.telephone.city/200/753115.jpg",
             createdAt: '2020-06-30',
             updatedAt: '2020-06-30'
         },
         {
             id: 5,
-            nom: "Veterinaire Sarrete",
+            nom: "Vétérinaire Sarrete",
             adresse: "3 rue Prisse D'Avennes",
             postal: "75014",
             lieux: "Paris",
@@ -57,7 +57,7 @@ module.exports = () => {
         },
         {
             id: 6,
-            nom: "Cabinet Veterinaire Passion Nac",
+            nom: "Cabinet Vétérinaire Passion Nac",
             adresse: "24 Rue de Rungis",
             postal: "75013",
             lieux: "Paris",
@@ -68,7 +68,7 @@ module.exports = () => {
         },
         {
             id: 7,
-            nom: "Veterinaire Jacob Denizet",
+            nom: "Vétérinaire Jacob Denizet",
             adresse: "247 rue de Tolbiac",
             postal: "75013",
             lieux: "Paris",
@@ -79,7 +79,7 @@ module.exports = () => {
         },
         {
             id: 8,
-            nom: "Clinique Veterinaire Vanderstylen",
+            nom: "Clinique Vétérinaire Vanderstylen",
             adresse: "61 rue Emile Raspail",
             postal: "94110",
             lieux: "Arcueil",
@@ -90,7 +90,7 @@ module.exports = () => {
         },
         {
             id: 9,
-            nom: "Veterinaire Alexandre Fleming",
+            nom: "Vétérinaire Alexandre Fleming",
             adresse: "9-11 avenue de la Marne",
             postal: "92120",
             lieux: "Montrouge",
@@ -101,7 +101,7 @@ module.exports = () => {
         },
         {
             id: 10,
-            nom: "Veterinaire Martineau",
+            nom: "Vétérinaire Martineau",
             adresse: "38 rue des Plantes",
             postal: "75014",
             lieux: "Paris",
@@ -112,7 +112,7 @@ module.exports = () => {
         },
         {
             id: 11,
-            nom: "Veterinaire Laillet",
+            nom: "Vétérinaire Laillet",
             adresse: "1 rue Aristide Briand",
             postal: "94250",
             lieux: "Gentylly",
@@ -123,7 +123,7 @@ module.exports = () => {
         },
         {
             id: 12,
-            nom: "Veterinaire Pennequin Monjean",
+            nom: "Vétérinaire Pennequin Monjean",
             adresse: "19 rue Sophie Germain",
             postal: "75014",
             lieux: "Paris",
@@ -134,7 +134,7 @@ module.exports = () => {
         },
         {
             id: 13,
-            nom: "Clinique Veterinaire Chatillon",
+            nom: "Clinique Vétérinaire Chatillon",
             adresse: "21 avenue de Verdun",
             postal: "92320",
             lieux: "Chatillon",
@@ -145,7 +145,7 @@ module.exports = () => {
         },
         {
             id: 14,
-            nom: "Veterinaire Kazi Aoul",
+            nom: "Vétérinaire Kazi Aoul",
             adresse: "7 avenue de la Porte Didot",
             postal: "75014",
             lieux: "Paris",
@@ -156,7 +156,7 @@ module.exports = () => {
         },
         {
             id: 15,
-            nom: "Clinique Veterinaire Pignon-Cabe",
+            nom: "Clinique Vétérinaire Pignon-Cabe",
             adresse: "8 rue Ernest Cresson",
             postal: "75014",
             lieux: "Paris",
@@ -167,7 +167,7 @@ module.exports = () => {
         },
         {
             id: 16,
-            nom: "Clinique Veterinaire Plaisance Losserand",
+            nom: "Clinique Vétérinaire Plaisance Losserand",
             adresse: "141 rue Raymond Losserand",
             postal: "75014",
             lieux: "Paris",
@@ -178,7 +178,7 @@ module.exports = () => {
         },
         {
             id: 17,
-            nom: "Clinique Veterinaire Exatys",
+            nom: "Clinique Vétérinaire Exatys",
             adresse: "58 rue de gergovie",
             postal: "75014",
             lieux: "Paris",
@@ -189,7 +189,7 @@ module.exports = () => {
         },
         {
             id: 18,
-            nom: "Clinique Veterinaire Des Peupliers",
+            nom: "Clinique Vétérinaire Des Peupliers",
             adresse: "16 rue Henri Pape",
             postal: "75013",
             lieux: "Paris",
@@ -200,7 +200,7 @@ module.exports = () => {
         },
         {
             id: 19,
-            nom: "Veterinaire Bourigault",
+            nom: "Vétérinaire Bourigault",
             adresse: "22 avenue Jules Ferry",
             postal: "92240",
             lieux: "Malakoff",
@@ -211,7 +211,7 @@ module.exports = () => {
         },
         {
             id: 20,
-            nom: "Veterinaire Ehrlich",
+            nom: "Vétérinaire Ehrlich",
             adresse: "12 rue Raymond Losserand",
             postal: "75014",
             lieux: "Paris",

@@ -10,9 +10,8 @@ const Map = (props) => {
     return (
         <GoogleMap defaultZoom={12}
             defaultCenter={{ lat: 48.858570, lng: 2.337799 }}
+            de
         />
-
-
     );
 }
 
@@ -21,5 +20,3 @@ export default withScriptjs(
         Map
     )
 )
-
-/**lat: 48.869007, lng: 2.419402 */

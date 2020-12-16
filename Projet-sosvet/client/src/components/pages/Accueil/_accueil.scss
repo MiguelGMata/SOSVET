@@ -1,61 +1,137 @@
 @import '../../../sass/config/mixins';
+body{
+  @include media(desktop) {
+    background-image: url("https://i.ibb.co/kqyVCvY/fondo.png");
+    background-size: 20%;
+ }
+}
 
   section {
-   
     display: flex;
     justify-content: center;
-    //background-color: brown;
     height: 80%;
     .div-center{
-      //background-color: chartreuse;
-      
+              
       .logo{
         width: 60%;
-        margin-left: 20%;
+        display:block;
+        margin-left: auto;
+        margin-right: auto;
+        @include media(tablet) {
+          margin-top: 15%;
+          width: 35vw;
+         }
+        @include media(desktop) {
+          display: none;
+        }
       }
+
+      .titre{
+        text-align: center;
+        margin-bottom: 0;
+        @include media(desktop) {
+          display: none;
+        }      
+       }
       .text{
         text-align: center;
         margin-bottom: 0;
+        @include media(desktop) {
+          display: none;
+        }
        }
        
-       .chien{
+      .chien{
         width: 450px;
         height: 25vh;
-        margin-left: 8%;
+        display:block;
+        margin-left: auto;
+        margin-right: auto;
+        @include media(tablet) {
+          width: 80vw;
+          height: 35vh;
+         }
+         @include media(desktop) {
+          display: none;
+        }
       }
+      .chien-video{
+        display: none;
+         @include media(desktop) {
+          display: flex;
+          margin-left: auto;
+          margin-right: auto;
+          width: 75vw;
+          height: 65vh;
+         
+        }
+      }
+      .carte{
+        @include media(desktop) {
+          width: 50vw;
+          height: 40vh;
+          margin-top: 5%;
+          margin-bottom: -5%;
+        }
+      }
+  
       .vete{
-        margin: 0 0 0 -5%;
+        margin: 0 0 0 0%;
+        margin-left: auto;
+        margin-right: auto;
       }
-    } 
-  
-    @include media(tablet) {
-      padding: 2%;
-      flex-direction: row;
-      flex-wrap: wrap;
-      padding-bottom: 2%;
-      .chien{
-        width: 750px;
-        margin-bottom: 25%;
-        margin-left: 5%;
-      }
-      p{
-        margin-top: -4%;
-        margin-left: 5%;
-        text-align: left;
-        font-size: 1rem;
-      }
-    }
-  
-    @include media(desktop) {
-      flex-direction: row;
-      flex-wrap: wrap;
-      .chien{
-        width: 1150px;
-        margin-bottom: 25%;
-        margin-left: 15%;
-      }
-    }
 
-  
-    
-  }
+
+     // #bakery:nth-child(1) h2 {
+       #bakery{
+         color: white;
+       }
+        @include media(desktop) {
+          #bakery:nth-child(1) h2 {
+            color: white;
+            transition: 0.2s;
+            margin-top: 8%;
+            margin-bottom: -1%;
+            font-size: 3.5rem;
+            text-align: center;
+          }
+            
+          #bakery:nth-child(1) h2{
+            -webkit-animation: neon1 1.2s ease-in-out infinite alternate;
+            -moz-animation: neon1 1.2s ease-in-out infinite alternate;
+            animation: neon1 1.2s ease-in-out infinite alternate;
+          }
+            
+          @-webkit-keyframes neon1 {
+            from {
+              text-shadow: 0 0 1px rgba(255, 255, 255, 0.4), 0 0 2px rgba(255, 255, 255, 0.4), 0 0 3px rgba(255, 255, 255, 0.4), 0 0 4px #228DFF, 0 0 7px #228DFF, 0 0 8px #228DFF, 0 0 5px #228DFF, 0 0 15px #228DFF;
+              }
+              to {
+              text-shadow: 0 0 5px rgba(255, 255, 255, 0.4), 0 0 10px rgba(255, 255, 255, 0.4), 0 0 15px rgba(255, 255, 255, 0.4), 0 0 20px #228DFF, 0 0 50px #228DFF, 0 0 4px #228DFF, 0 0 5px #228DFF, 0 0 7px #228DFF;
+            }
+          }    
+            
+          @-moz-keyframes neon1 {
+            from {
+              text-shadow: 0 0 1px rgba(255, 255, 255, 0.4), 0 0 2px rgba(255, 255, 255, 0.4), 0 0 3px rgba(255, 255, 255, 0.4), 0 0 4px #228DFF, 0 0 7px #228DFF, 0 0 8px #228DFF, 0 0 5px #228DFF, 0 0 15px #228DFF;
+              }
+              to {
+              text-shadow: 0 0 5px rgba(255, 255, 255, 0.4), 0 0 10px rgba(255, 255, 255, 0.4), 0 0 15px rgba(255, 255, 255, 0.4), 0 0 20px #228DFF, 0 0 50px #228DFF, 0 0 4px #228DFF, 0 0 5px #228DFF, 0 0 7px #228DFF;
+            }
+              
+          }
+          @keyframes neon1 {
+            from {
+              text-shadow: 0 0 1px rgba(255, 255, 255, 0.4), 0 0 2px rgba(255, 255, 255, 0.4), 0 0 3px rgba(255, 255, 255, 0.4), 0 0 4px #228DFF, 0 0 7px #228DFF, 0 0 8px #228DFF, 0 0 5px #228DFF, 0 0 15px #228DFF;
+              }
+              to {
+              text-shadow: 0 0 5px rgba(255, 255, 255, 0.4), 0 0 10px rgba(255, 255, 255, 0.4), 0 0 15px rgba(255, 255, 255, 0.4), 0 0 20px #228DFF, 0 0 50px #228DFF, 0 0 4px #228DFF, 0 0 5px #228DFF, 0 0 7px #228DFF;
+            }
+          }
+        }
+    } 
+
+
+
+
+}

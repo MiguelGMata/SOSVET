@@ -1,10 +1,11 @@
 import axios from 'axios';
 
-export const login = user => {
+export const connexion = user => {
     return axios
         .post('sos/connexion', {
             email: user.email,
-            password: user.password
+            password: user.password,
+            errorMessage: user.errorMessage,
         })
         .then(response => {
             console.log('carever', response.data)
@@ -12,7 +13,5 @@ export const login = user => {
             console.log(response.data)
             return response.data
         })
-        .catch(err => {
-            console.log(err)
-        })
+
 }

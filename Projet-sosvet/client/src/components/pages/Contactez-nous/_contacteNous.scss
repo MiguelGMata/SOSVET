@@ -1,0 +1,76 @@
+@import '../../../sass/config/mixins';
+
+.jumbo-c{
+    border: none;
+     background: #20b2aa;
+     padding: 5%;
+     padding-bottom: 20%;
+     h2{
+        font-size: 2rem;
+        color: white;
+        display:block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      h6{
+        font-size: 1.2rem;
+        color: black;
+        text-align: center;
+        margin-top: 2%;
+        margin-bottom: 2%;
+      }
+      p{
+        text-align: center;
+        font-size: 0.9rem;
+      }
+     @include media(desktop) {
+       width: 50vw;
+        margin-top: 5%;
+        margin-left: -20%;
+     }
+   
+
+    .form-group{
+        color: black;
+        font-size: 1.2rem;
+        font-style: oblique;
+     
+    }
+  .button-contact {
+    width: 15vh;
+    height: 42px;
+    font-size: 14px;
+    background-color:  #1e90ff;
+    border: none;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    border-style: none;  
+    margin-left: 15%;
+    font-size: 20px;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5%;
+        
+  }
+  .button-contact:hover {
+    background-color: #00509e;;
+    cursor: pointer;
+  }
+  .button-contact:focus {
+    outline: none !important;
+  }
+
+  .chien{
+    width: 60vw;
+    height: 30vh;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    @include media(desktop) {
+      width: 40vw;
+      height: 40vh;
+      margin-bottom: -5%;
+    }
+  }
+}

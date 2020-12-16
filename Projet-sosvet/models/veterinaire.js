@@ -14,44 +14,16 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   Veterinaire.init({
-    id: {
-      type: DataTypes.INTEGER,
-      autoIncrement: true,
-      primaryKey: true,
-      allowNull: false,
-      validate: {
-        notNull: true,
-      },
-    },
-    nom: {
-      type: DataTypes.STRING
-    },
-    adresse: {
-      type: DataTypes.STRING
-    },
-    postal: {
-      type: DataTypes.STRING
-    },
-    lieux: {
-      type: DataTypes.STRING
-    },
-    phone: {
-      type: DataTypes.STRING
-    },
-    pictures: {
-      type: DataTypes.STRING(1000)
-    },
-    createdAt: {
-      allowNull: false,
-      type: DataTypes.DATE
-    },
-    updatedAt: {
-      allowNull: false,
-      type: DataTypes.DATE
-    }
-  }, {
-    sequelize,
-    modelName: 'Veterinaire',
-  });
+    nom: DataTypes.STRING,
+    adresse: DataTypes.STRING,
+    postal: DataTypes.STRING,
+    lieux: DataTypes.STRING,
+    phone: DataTypes.STRING,
+    pictures: DataTypes.STRING(1000),
+  },
+    {
+      sequelize,
+      modelName: 'Veterinaire',
+    });
   return Veterinaire;
 };

@@ -1,13 +1,9 @@
 import React, { Component } from 'react';
 import { register } from './ListeFunc';
-import { GoogleLogin } from 'react-google-login';
 import { Link } from 'react-router-dom';
 
 require('./_inscription.scss')
 
-const responseGoogle = (reponse) => {
-    console.log(reponse);
-}
 
 class Inscription extends Component {
     constructor() {
@@ -17,35 +13,40 @@ class Inscription extends Component {
             last_name: '',
             email: '',
             password: '',
-            errors: {}
+            errorMessage: [],
         }
-
         this.onChange = this.onChange.bind(this)
         this.onSubmit = this.onSubmit.bind(this)
     }
-
     onChange(e) {
         this.setState({ [e.target.name]: e.target.value })
     }
     onSubmit(e) {
         e.preventDefault()
-
         const newUser = {
             first_name: this.state.first_name,
             last_name: this.state.last_name,
             email: this.state.email,
             password: this.state.password,
         }
-
-        register(newUser).then(res => {
-            this.props.history.push(`/connexion`)
-        })
+        register(newUser)
+            .then(res => {
+                this.props.history.push(`/connexion`)
+                if (window.confirm("Merci pour votre inscription chez SOSVET, maintenant vous pouvez vous connecter à notre site")) {
+                }
+            })
+            .catch(err => {
+                this.setState({
+                    errorMessage: err.response
+                });
+                const description = (this.state.errorMessage.data.description);
+                if (window.confirm(description)) {
+                }
+            })
     }
-
     render() {
         return (
-
-            <div className="container conteneur">
+            <div className="conteneur" id="taille-i">
                 <div className="row">
                     <div className="col-md-6 mt-5 mx-auto">
                         <form noValidate onSubmit={this.onSubmit}>
@@ -90,7 +91,7 @@ class Inscription extends Component {
                                     type="password"
                                     className="form-control"
                                     name="password"
-                                    placeholder="Créez votre nouveau mot de passe"
+                                    placeholder="Créez votre mot de passe"
                                     value={this.state.password}
                                     onChange={this.onChange}
                                 />
@@ -103,11 +104,10 @@ class Inscription extends Component {
                                     S'inscrire!
                             </button>
                             </div>
-
                         </form>
                     </div>
                 </div>
-                <h3>Connectez-Vous <br></br>si vous avez déjà un compte</h3>
+                <h3>Connectez-vous ici<br></br>si vous avez déjà un compte</h3>
                 <div className="button-center">
                     <button className="button2" type="submit">
                         <Link to="/connexion">
@@ -115,22 +115,9 @@ class Inscription extends Component {
                         </Link>
                     </button>
                 </div>
-                <div className="button-center">
-                    <div className="btn-google">
-
-                        <GoogleLogin
-                            clientId="77122650789-4cni14nj3ho347dgcihh0vtvn7qoc52u.apps.googleusercontent.com"
-                            buttonText="Continuer avec Google"
-                            onSuccess={responseGoogle}
-                            onFailure={responseGoogle}
-                            cookiePolicy={'single_host_origin'}
-                        />
-                    </div>
-                </div>
-            </div>
-
+            </div >
         )
     }
 }
 
-export default Inscription
+export default Inscription;

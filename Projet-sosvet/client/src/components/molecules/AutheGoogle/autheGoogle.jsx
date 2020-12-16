@@ -1,11 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { GoogleLogin } from 'react-google-login';
+import { response } from 'express';
+
 
 
 export default function autheGoogle() {
 
-    const responseGoogle = (reponse) => {
-        console.log(reponse);
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [url, setUrl] = useState('');
+
+    const responseGoogle = response => {
+        setName('tutu', response.profileObj.name)
+        setEmail(response.profileObj.email)
+        setUrl(response.profileObj.imageUrl)
+
     }
     return (
         <div>

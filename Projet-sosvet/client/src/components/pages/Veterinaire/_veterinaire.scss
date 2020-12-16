@@ -1,4 +1,21 @@
 @import '../../../sass/config/mixins';
+
+
+.carte-fix{
+    margin-left: -4.5%;
+    @include media(desktop) {
+    display: block !important;
+    position: fixed;
+    top: 10%;
+    left: 58%;
+  }
+}
+  .div-center-2{
+    @include media(desktop) {
+    margin-left: -70% ;
+    margin-top: 4%;
+    }
+  }
 .table{
     
     .tex{
@@ -39,12 +56,18 @@
                 color: red;
                 font-size: 0.9rem;
             }
+        @include media(desktop) {
+            display: none !important;
         }
+    }
 
         .button-rdv{
                 margin-left: 5%;
                 margin-top: -6%;
                 margin-bottom: 5%;
+                @include media(desktop) {
+                    margin-top: -4%;
+                   }
 
             .rdv {
                 width: 10%;
@@ -54,9 +77,7 @@
                 border: none;
                 border-radius: 5px;
                 color: rgb(255, 255, 255);
-                border-style: none;
-                
-                
+                border-style: none;                
             }
             .rdv:hover {
                 background-color: rgb(151, 25, 46);
@@ -74,8 +95,13 @@
         }
         .photo{
             width: 90%;
-            height: 30vh;
+            height: 25vh;
             margin: 2% 0 2% 5%;
+            @include media(desktop) {
+                width: 80%;
+                height: 30vh;
+                margin: 1% 0 2% 10%;
+            }
         }
     }
 
